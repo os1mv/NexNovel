@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up | NexNovel</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body id="signup-page">
+  <main class="content" style="max-width: 560px; margin: 80px auto; padding: 24px;">
+    <section class="section-block">
+      <div class="section-header"><div><h2 data-i18n="signup">Sign Up</h2><p data-i18n="createStory">Create a reading profile instantly.</p></div></div>
+      <form id="signupForm" class="auth-form">
+        <input name="name" type="text" data-i18n="fullName" placeholder="Full name" required />
+        <input name="email" type="email" data-i18n="email" placeholder="Email" required />
+        <input name="password" type="password" data-i18n="password" placeholder="Password" required />
+        <button class="button primary" type="submit" data-i18n="createAccountButton">Create account</button>
+      </form>
+      <p><span data-i18n="alreadyHaveAccount">Already have an account?</span> <a class="text-link" href="login.html" data-i18n="login">Login</a></p>
+    </section>
+  </main>
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

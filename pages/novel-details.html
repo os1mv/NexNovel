@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novel Details | NovelNest</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body id="details-page">
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><a href="../index.html" data-i18n="brand">NexNovel</a></div>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode"></button>
+        <button id="langToggle" class="icon-btn" aria-label="Toggle language"></button>
+        <a id="authButton" class="nav-btn" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a class="nav-link" href="../index.html">Home</a>
+        <a class="nav-link active" href="#novelDetail">Details</a>
+        <a class="nav-link" href="../pages/profile.html">Profile</a>
+        <a class="nav-link" href="../pages/add-novel.html">Add Novel</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <section id="novelDetail" class="section-block"></section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="../script.js"></script>
+</body>
+</html>

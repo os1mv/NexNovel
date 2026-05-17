@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexNovel | Reading Hub</title>
+  <link rel="icon" href="photo/logo.jpg" />
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body id="home-page">
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+          <a href="index.html" data-i18n="brand">NexNovel</a>
+          <span class="tagline" data-i18n="tagline">Read. Track. Enjoy.</span>
+      </div>
+
+      <div class="header-actions">
+        <div class="search-group">
+          <input id="searchInput" type="search" data-i18n="searchPlaceholder" aria-label="Search novels" />
+          <button id="searchButton" class="icon-btn" aria-label="Search">
+            ⌕
+          </button>
+        </div>
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode"></button>
+        <button id="langToggle" class="icon-btn" aria-label="Toggle language"></button>
+        <a id="authButton" class="nav-btn" href="pages/login.html">Login</a>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a class="nav-link active" href="index.html" data-i18n="home">Home</a>
+        <a class="nav-link" href="#featured" data-i18n="featured">Featured</a>
+        <a class="nav-link" href="#categories" data-i18n="genres">Genres</a>
+        <a class="nav-link" href="pages/profile.html" data-i18n="profile">Profile</a>
+        <a class="nav-link" href="pages/add-novel.html" data-i18n="addNovel">Add Novel</a>
+      </nav>
+
+      <section class="sidebar-card">
+        <h3 data-i18n="continue">Continue Reading</h3>
+        <div id="continueList" class="continue-list"></div>
+      </section>
+    </aside>
+
+    <main class="content">
+      <section class="hero-card">
+        <div>
+          <h1 data-i18n="discover">Discover your next favorite novel</h1>
+          <p data-i18n="heroDescription">Browse trending stories, save favorites, and keep your reading progress synced locally.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#featured" data-i18n="discover">Discover</a>
+            <a class="button outline" href="pages/signup.html" data-i18n="joinNow">Join now</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="novel-preview" data-i18n="newRelease">New release</div>
+        </div>
+      </section>
+
+      <section id="featured" class="section-block">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="featured">Featured Novels</h2>
+            <p data-i18n="handpicked">Handpicked stories for every mood.</p>
+          </div>
+          <a class="text-link" href="pages/add-novel.html" data-i18n="addNovel">Add Novel</a>
+        </div>
+        <div id="featuredGrid" class="card-grid"></div>
+      </section>
+
+      <section id="categories" class="section-block">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="genres">Genres</h2>
+            <p data-i18n="browseCategory">Browse by category.</p>
+          </div>
+        </div>
+        <div class="genre-grid" id="genreGrid"></div>
+      </section>
+
+      <section class="section-block split-grid">
+        <div>
+          <h3 data-i18n="trendingNow">Trending now</h3>
+          <div id="trendingGrid" class="card-grid"></div>
+        </div>
+        <div>
+          <h3 data-i18n="recentlyAdded">Recently added</h3>
+          <div id="recentGrid" class="card-grid"></div>
+        </div>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header">
+          <div>
+            <h2 data-i18n="stayInLoop">Stay in the loop</h2>
+            <p data-i18n="updatesTips">Notifications, updates, and reading tips.</p>
+          </div>
+        </div>
+        <div class="toast-sample">
+          <strong data-i18n="tip">Tip:</strong> <span data-i18n="tapReview">Tap any novel card to open details and leave a review.</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

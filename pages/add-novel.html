@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Add Novel | NovelNest</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body id="add-novel-page">
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand"><a href="../index.html" data-i18n="brand">NexNovel</a></div>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode"></button>
+        <button id="langToggle" class="icon-btn" aria-label="Toggle language"></button>
+        <a id="authButton" class="nav-btn" href="login.html">Login</a>
+      </div>
+    </header>
+
+    <aside class="sidebar">
+      <nav>
+        <a class="nav-link" href="../index.html" data-i18n="home">Home</a>
+        <a class="nav-link" href="profile.html" data-i18n="profile">Profile</a>
+        <a class="nav-link active" href="#addForm" data-i18n="addNovel">Add Novel</a>
+      </nav>
+      <section class="sidebar-card">
+        <h3 data-i18n="myNovels">Your Novels</h3>
+        <p data-i18n="createEditManage">Create, edit and manage your own novels here.</p>
+      </section>
+    </aside>
+
+    <main class="content">
+      <section class="section-block" id="addForm">
+        <div class="section-header"><div><h2 data-i18n="addNovel">Add New Novel</h2><p data-i18n="createStory">Create a new story for the community.</p></div></div>
+        <form id="novelForm" class="auth-form" style="max-width: 600px;">
+          <input type="hidden" name="novelId" />
+          <div class="input-grid">
+            <input name="title" type="text" data-i18n="novelTitle" placeholder="Novel Title" required />
+            <input name="author" type="text" data-i18n="authorName" placeholder="Author Name" required />
+            <input name="genre" type="text" data-i18n="genreLabel" placeholder="Genre" required />
+            <input name="published" type="text" data-i18n="publishedYear" placeholder="Published Year" required />
+          </div>
+          <textarea name="description" rows="4" data-i18n="novelDescription" placeholder="Novel Description" required></textarea>
+          <textarea name="content" rows="8" data-i18n="chapterContent" placeholder="Chapter 1 Content" required></textarea>
+          <button class="button primary" type="submit" data-i18n="saveNovelButton">Save Novel</button>
+        </form>
+      </section>
+
+      <section class="section-block">
+        <div class="section-header"><div><h2 data-i18n="myNovels">Your Novels</h2><p data-i18n="editDeleteEntries">Edit or delete your own novels.</p></div></div>
+        <div id="userNovelsList" class="card-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="../script.js"></script>
+</body>
+</html>
